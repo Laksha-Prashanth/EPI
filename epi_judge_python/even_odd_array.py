@@ -9,6 +9,11 @@ from test_framework.test_utils import enable_executor_hook
 
 def even_odd(A: List[int]) -> None:
     # TODO - you fill in here.
+    even = -1
+    for i in range(len(A)):
+        if A[i]%2 == 0:
+            A[even+1],A[i] = A[i],A[even+1]
+            even += 1
     return
 
 
