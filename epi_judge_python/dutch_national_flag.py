@@ -10,6 +10,21 @@ RED, WHITE, BLUE = range(3)
 
 def dutch_flag_partition(pivot_index: int, A: List[int]) -> None:
     # TODO - you fill in here.
+    left = -1
+    right = len(A)
+    i = 0
+    pivot = A[pivot_index]
+    while i < right:
+        if A[i] == pivot:
+            i += 1
+        elif A[i] < pivot:
+            A[left+1], A[i] = A[i],A[left+1]
+            left += 1
+            i += 1
+        else:
+            A[right-1], A[i] = A[i], A[right-1]
+            right -= 1
+
     return
 
 

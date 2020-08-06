@@ -194,7 +194,7 @@ problem_mapping = {
                 "total": 204
             },
             "Python: dutch_national_flag.py": {
-                "passed": 0,
+                "passed": 204,
                 "total": 204
             }
         },
@@ -208,7 +208,7 @@ problem_mapping = {
                 "total": 505
             },
             "Python: int_as_array_increment.py": {
-                "passed": 0,
+                "passed": 505,
                 "total": 505
             }
         },
@@ -222,7 +222,7 @@ problem_mapping = {
                 "total": 1000
             },
             "Python: int_as_array_multiply.py": {
-                "passed": 0,
+                "passed": 1000,
                 "total": 1000
             }
         },
