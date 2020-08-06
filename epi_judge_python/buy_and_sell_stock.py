@@ -5,7 +5,15 @@ from test_framework import generic_test
 
 def buy_and_sell_stock_once(prices: List[float]) -> float:
     # TODO - you fill in here.
-    return 0.0
+    lowest = prices[0]
+    profit = 0
+
+    for i in prices:
+        if i - lowest > profit:
+            profit = i-lowest
+        if i < lowest:
+            lowest = i
+    return profit
 
 
 if __name__ == '__main__':
