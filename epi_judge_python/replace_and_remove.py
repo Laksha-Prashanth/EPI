@@ -7,7 +7,36 @@ from test_framework.test_utils import enable_executor_hook
 
 def replace_and_remove(size: int, s: List[str]) -> int:
     # TODO - you fill in here.
-    return 0
+    b_count = sum([1 if c == 'b' else 0 for c in s[:size]])
+    i = 0
+    start = 0
+    while start < size - b_count:
+        while s[i] == 'b':
+            i += 1
+        s[start] = s[i]
+        start += 1
+        i += 1
+    size -= b_count
+
+    #replace a with dd
+    a_count = sum([1 if c == 'a' else 0 for c in s[:size]])
+    new_size = size+a_count
+    size -= 1
+    i = size
+    size += a_count
+    
+    while i >=0:
+        if s[i] == 'a':
+            s[size] = 'd'
+            s[size-1] = 'd'
+            size -= 2
+        else:
+            s[size] = s[i]
+            size -= 1
+        i -= 1
+
+
+    return new_size
 
 
 @enable_executor_hook
