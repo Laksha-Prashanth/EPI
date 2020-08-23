@@ -6,7 +6,21 @@ from test_framework import generic_test
 
 def even_odd_merge(L: ListNode) -> Optional[ListNode]:
     # TODO - you fill in here.
-    return None
+    if not L:
+        return None
+    curr = L
+    odd = L.next
+    odd_start = odd
+
+    while odd and odd.next:
+        curr.next = odd.next
+        curr = curr.next
+        odd.next = curr.next
+        curr.next = odd_start
+
+        odd = odd.next
+
+    return L
 
 
 if __name__ == '__main__':

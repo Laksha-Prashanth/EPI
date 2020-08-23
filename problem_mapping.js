@@ -740,7 +740,7 @@ problem_mapping = {
                 "total": 106
             },
             "Python: do_terminated_lists_overlap.py": {
-                "passed": 0,
+                "passed": 106,
                 "total": 106
             }
         },
@@ -782,7 +782,7 @@ problem_mapping = {
                 "total": 306
             },
             "Python: delete_kth_last_from_list.py": {
-                "passed": 0,
+                "passed": 306,
                 "total": 306
             }
         },
@@ -824,7 +824,7 @@ problem_mapping = {
                 "total": 1015
             },
             "Python: even_odd_list_merge.py": {
-                "passed": 0,
+                "passed": 1015,
                 "total": 1015
             }
         },
@@ -838,7 +838,7 @@ problem_mapping = {
                 "total": 203
             },
             "Python: is_list_palindromic.py": {
-                "passed": 0,
+                "passed": 201,
                 "total": 203
             }
         },
