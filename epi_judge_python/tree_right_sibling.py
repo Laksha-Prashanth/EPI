@@ -1,4 +1,5 @@
 import functools
+from collections import deque
 
 from test_framework import generic_test
 from test_framework.test_utils import enable_executor_hook
@@ -14,7 +15,30 @@ class BinaryTreeNode:
 
 def construct_right_sibling(tree: BinaryTreeNode) -> None:
     # TODO - you fill in here.
-    return
+
+    if not tree:
+        return None
+
+    queue  = deque()
+    queue.append(tree)
+
+    while queue:
+
+        temp_q = deque()
+
+        while queue:
+            curr = queue.popleft()
+            if queue:
+                curr.next = queue[0]
+            if curr.left:
+                temp_q.append(curr.left)
+            if curr.right:
+                temp_q.append(curr.right)
+        
+        queue = temp_q
+            
+
+    return tree
 
 
 def traverse_next(node):
