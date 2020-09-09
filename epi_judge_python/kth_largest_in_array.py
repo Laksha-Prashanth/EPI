@@ -33,12 +33,15 @@ def find_kth_largest(k: int, A: List[int]) -> int:
         return partition(A,L,R)
 
     def selectHelper(A,i, L, R):
-        curr = random_partition(A,L,R)
+        curr = -1
         while curr != i-1:
-            if curr > i-1:
-                curr = random_partition(A,L, curr-1)
+            curr = random_partition(A,L,R)
+            if curr == i-1:
+                return A[curr]
+            elif curr > i-1:
+                R = curr-1
             else:
-                curr = random_partition(A,curr+1, R)
+                L = curr+1
         return A[curr]
     
     return selectHelper(A,len(A) + 1 - k,0,len(A)-1)
