@@ -7,10 +7,51 @@ from test_framework.binary_tree_utils import must_find_node
 from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
+'''
+            5
+        4       -1
+    2       3   4   29
+0
 
+        1
+    2       3
+4
+{4, -1, 5}
+
+lca(0,,3)
+
+lca(2,4)
+5
+
+lca(None, 4)
+None
+
+'''
 def lca(node0: BinaryTreeNode,
         node1: BinaryTreeNode) -> Optional[BinaryTreeNode]:
-    # TODO - you fill in here.
+
+    if not node1 or not node0:
+        return None
+
+    if node0 is node1:
+        return node0
+
+    parent_set = set([node0,node1])
+    i = node0
+    j = node1
+
+    while i or j:
+        if i:
+            if i.parent in parent_set:
+                return i.parent
+            parent_set.add(i.parent)
+            i = i.parent
+        if j:
+            if j.parent in parent_set:
+                return j.parent
+            parent_set.add(j.parent)
+            j = j.parent
+
     return None
 
 
