@@ -7,6 +7,17 @@ from test_framework.test_utils import enable_executor_hook
 
 Subarray = collections.namedtuple('Subarray', ('start', 'end'))
 
+'''
+apple, banana, cat, apple
+[banana, apple]
+j
+table{
+    banana: 1
+
+}
+
+
+'''
 
 def find_smallest_sequentially_covering_subset(paragraph: List[str],
                                                keywords: List[str]
