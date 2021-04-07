@@ -5,7 +5,40 @@ from test_framework import generic_test
 from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
+'''
+2: 0,1,3,2
+00
+01
+11
+11
 
+3: 0,1,3,2,6,7,5,4
+000
+001
+011
+010
+110
+111
+101
+100
+
+4: 0,1,3,2,6,7,5,4,
+0000
+0001
+0011
+0010
+0110
+0111
+0101
+0100
+1100
+1101
+1111
+1110
+1010
+1000
+
+'''
 def gray_code(num_bits: int) -> List[int]:
     # TODO - you fill in here.
     return []
